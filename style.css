@@ -1,0 +1,144 @@
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #f2f4f8;
+    margin: 0;
+    padding: 0;
+    line-height: 1.6; /* General line height */
+  }
+  
+  .popup {
+    max-width: 450px;
+    padding: 30px;
+    border-radius: 15px;
+    background-color: #fff;
+    border-top: 5px solid #005bac; /* SAU blue */
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) scale(0.7);
+    opacity: 0;
+    transition: all 0.4s ease;
+    z-index: 2;
+  }
+  
+  .popup.show {
+    opacity: 1;
+    transform: translate(-50%, -50%) scale(1);
+  }
+  
+  .logo {
+    display: block;
+    margin: 0 auto 10px;
+    width: 80px;
+  }
+  
+  h2 {
+    text-align: center;
+    color: #005bac;
+    margin-bottom: 20px;
+    font-size: 20px;
+    line-height: 1.4;
+  }
+  
+  h2 span {
+    font-size: 16px;
+    color: #333;
+    line-height: 1.4;
+  }
+  
+  form {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+  }
+  
+  label {
+    margin-top: 10px;
+    margin-bottom: 5px;
+    font-weight: bold;
+    font-size: 14px;
+    line-height: 1.4;
+  }
+  
+  input[type="text"],
+  input[type="password"] {
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    font-size: 14px;
+    line-height: 1.6;
+  }
+  
+  button[type="submit"] {
+    margin-top: 20px;
+    background-color: #005bac;
+    color: white;
+    padding: 10px;
+    font-size: 16px;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background 0.3s ease;
+  }
+  
+  button[type="submit"]:hover {
+    background-color: #004a91;
+  }
+  
+  .buttons {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 15px;
+    gap: 10px;
+  }
+  
+  button.register {
+    background-color: #28a745;
+    color: #fff;
+    padding: 8px 12px;
+    font-size: 14px;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background 0.3s ease;
+  }
+  
+  button.register:hover {
+    background-color: #218838;
+  }
+  
+  button.reset {
+    background-color: #dc3545;
+    color: #fff;
+    padding: 8px 12px;
+    font-size: 14px;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background 0.3s ease;
+  }
+  
+  button.reset:hover {
+    background-color: #c82333;
+  }
+  
+  .captcha {
+    background-color: #eef1f7;
+    color: #333;
+    font-weight: bold;
+    padding: 10px;
+    margin-bottom: 10px;
+    border-radius: 6px;
+    text-align: center;
+    user-select: none;
+    cursor: pointer;
+  }
+  
+  .error {
+    color: red;
+    font-size: 12px;
+    margin-top: 4px;
+    line-height: 1.4;
+  }
+  

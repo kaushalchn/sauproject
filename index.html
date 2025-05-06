@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>SAU Student Portal</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="overlay"></div>
+  <div class="popup login-form">
+    <img src="sau-logo.png" alt="SAU Logo" class="logo" />
+    <h2>South Asian University<br><span>Student Portal</span></h2>
+    <form onsubmit="return validateForm()">
+      <label for="username">Username</label>
+      <input type="text" id="username" name="username" placeholder="Enter username" />
+      <div class="error" id="user-error"></div>
+
+      <label for="password">Password</label>
+      <input type="password" id="password" name="password" placeholder="Enter password" />
+
+      <label for="captcha">Captcha Verification (Click to change)</label>
+      <div class="captcha" onclick="generateCaptcha()" id="captcha-text"></div>
+      <input type="text" id="captcha-input" name="captcha" placeholder="Enter captcha" />
+      <div class="error" id="captcha-error"></div>
+
+      <button type="submit">Login</button>
+      <div class="buttons">
+        <button type="button" class="register">New Registration</button>
+        <button type="button" class="reset">Reset Password</button>
+      </div>
+    </form>
+  </div>
+  <script src="script.js"></script>
+</body>
+</html>
