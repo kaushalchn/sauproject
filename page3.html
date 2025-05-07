@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>SAU Grade Entry Portal</title>
+  <style>
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background-color: #f7f9fc;
+  margin: 0;
+  padding: 0;
+}
+
+.container {
+  max-width: 750px; /* increased width */
+  margin: 50px auto;
+  padding: 25px; /* reduced height */
+  background-color: #ffffff;
+  border-radius: 15px;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
+  transition: box-shadow 0.3s ease, transform 0.3s ease;
+}
+
+.container:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 20px 35px rgba(0, 0, 0, 0.1);
+}
+
+h1 {
+  text-align: center;
+  font-size: 32px;
+  color: #005bac;
+  margin-bottom: 10px;
+  font-weight: 700;
+}
+
+h1::after {
+  content: '';
+  display: block;
+  height: 6px;
+  width: 400px; 
+  background-color: #005bac;
+  margin: 8px auto 0 auto;
+  border-radius: 4px;
+}
+
+
+label {
+  display: block;
+  margin-top: 16px;
+  margin-bottom: 6px;
+  font-weight: 600;
+  color: #333;
+}
+
+select {
+  width: 100%;
+  padding: 14px;
+  font-size: 16px;
+  border: 2px solid #005bac;
+  border-radius: 8px;
+  background-color: #f9f9f9;
+  color: #005bac;
+  appearance: none;
+  background-image: url("data:image/svg+xml;charset=US-ASCII,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%204%205'%3E%3Cpath%20fill='%230057b8'%20d='M2%205L0%200h4z'/%3E%3C/svg%3E");
+  background-repeat: no-repeat;
+  background-position: right 12px top 50%;
+  background-size: 10px 10px;
+  transition: border-color 0.3s ease, background-color 0.3s ease;
+  cursor: pointer;
+}
+
+select:focus {
+  outline: none;
+  border-color: #003f80;
+  box-shadow: 0 0 5px 2px rgba(0, 91, 172, 0.3);
+  background-color: #fff;
+}
+
+option {
+  color: #005bac;
+}
+
+button#submitBtn {
+  margin-top: 30px;
+  background-color: #28a745;
+  color: #fff;
+  border: none;
+  padding: 18px;
+  width: 100%;
+  font-size: 18px;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.1);
+}
+
+button#submitBtn:hover {
+  background-color: #218838;
+  transform: translateY(-3px);
+}
+
+button#submitBtn:active {
+  background-color: #1e7e34;
+  transform: translateY(0);
+}
+
+button#submitBtn:focus {
+  outline: none;
+  box-shadow: 0 0 0 3px rgba(40, 167, 69, 0.3);
+}
+
+.container input[type="text"],
+.container input[type="email"],
+.container textarea {
+  width: 100%;
+  padding: 14px;
+  font-size: 16px;
+  border: 2px solid #ddd;
+  border-radius: 8px;
+  background-color: #f9f9f9;
+  color: #333;
+  margin-bottom: 20px;
+  transition: border-color 0.3s ease, background-color 0.3s ease;
+}
+
+.container input[type="text"]:focus,
+.container input[type="email"]:focus,
+.container textarea:focus {
+  outline: none;
+  border-color: #005bac;
+  box-shadow: 0 0 5px 2px rgba(0, 91, 172, 0.3);
+  background-color: #fff;
+}
+
+.form-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+  </style>
+</head>
+<body>
+
+  <div class="container">
+    <h1>SAU Grades Entry Portal</h1>
+
+    <label for="programme">Programme:</label>
+    <select id="programme" name="programme" required>
+      <option value="">-- Select Programme --</option>
+      <option>Bachelors</option>
+      <option>Masters</option>
+      <option>PhD</option>
+    </select>
+
+    <label for="semester">Semester:</label>
+    <select id="semester" name="semester" required>
+      <option value="">-- Select Semester --</option>
+      <option>I</option>
+      <option>II</option>
+      <option>III</option>
+      <option>IV</option>
+    </select>
+
+    <label for="subject">Subject:</label>
+    <select id="subject" name="subject" required>
+      <option value="">-- Select Subject --</option>
+
+      <!-- Bachelors -->
+      <option>BTech CSE</option>
+      <option>BTech CSE (Spl. in AI & ML)</option>
+      <option>BTech CSE (Spl. in Data Science & AI)</option>
+      <option>BTech CSE (Spl. in Cybersecurity)</option>
+      <option>BTech CSE (Spl. in Business Systems & Intelligence)</option>
+      <option>Dual Degree BTech – MTech (CSE) (Spl Options)</option>
+      <option>BTech (Mathematics and Computing)</option>
+      <option>Integrated BBA-MBA</option>
+      <option>Int. BS-MS (Interdisciplinary Sciences)</option>
+
+      <!-- Masters -->
+      <option>MSc Mathematics / Applied Mathematics</option>
+      <option>MSc Biotechnology</option>
+      <option>MSc Computer Science</option>
+      <option>MCA</option>
+      <option>M.Tech. (Computer Science)</option>
+      <option>Integrated M.Sc. + M.Tech. (CS)</option>
+      <option>MA Economics</option>
+      <option>MA International Relations</option>
+      <option>MA Sociology</option>
+      <option>LLM (Master of Laws)</option>
+      <option>MBA</option>
+      <option>MS (Climate Change & Sustainability)</option>
+      <option>Executive MBA</option>
+
+      <!-- PhD -->
+      <option>PhD Mathematics</option>
+      <option>PhD Biotechnology</option>
+      <option>PhD Computer Science</option>
+      <option>PhD Economics</option>
+      <option>PhD International Relations</option>
+      <option>PhD Sociology</option>
+      <option>PhD Legal Studies</option>
+      <option>PhD Media, Arts and Design</option>
+      <option>PhD Physics</option>
+      <option>Executive PhD</option>
+    </select>
+
+    <button id="submitBtn">Submit</button>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
